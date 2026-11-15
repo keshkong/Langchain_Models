@@ -1,10 +1,10 @@
 # LangChain Models
 
-A hands-on collection of experiments and implementations exploring **Large Language Models (LLMs), Chat Models, Embedding Models, and semantic search** using the LangChain ecosystem.
+A hands-on collection of experiments and implementations exploring **Large Language Models (LLMs), Chat Models, Embedding Models, and Semantic Search** using the LangChain ecosystem.
 
 This repository demonstrates how to interact with different LLM providers, work with locally hosted models, generate text embeddings, and measure document similarity.
 
-## 📌 Project Overview
+## Project Overview
 
 The repository explores the following areas:
 
@@ -16,7 +16,7 @@ The repository explores the following areas:
 - **Local LLMs:** Running language models locally using Ollama.
 - **Hugging Face Integration:** Exploring hosted API and local model integrations.
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 Langchain_Models/
@@ -41,7 +41,7 @@ Langchain_Models/
 └── README.md
 ```
 
-*Note: This structure reflects the files and folders identified so far. Additional repository files may be added as the project evolves.*
+*Note: This structure reflects the files and folders identified so far.*
 
 ## 1. Chat Models
 
@@ -95,13 +95,16 @@ A typical workflow:
 3. Calculate cosine similarity between the vectors.
 4. Identify the document with the highest similarity score.
 
-**Cosine similarity:**
+**What is cosine similarity?**
 
-\[
-\text{Similarity}(A,B)=\frac{A\cdot B}{\|A\|\|B\|}
-\]
+Cosine similarity measures how closely two vectors point in the same direction.
 
-A higher cosine similarity generally indicates greater directional similarity between two embedding vectors.
+In simple terms:
+- A score close to **1** indicates high similarity.
+- A score close to **0** indicates little directional similarity.
+- A score close to **-1** indicates opposite directions.
+
+For example, when searching for information about Jasprit Bumrah, the system converts the query and available documents into embeddings, compares their similarity scores, and retrieves the most relevant document.
 
 ## 3. Large Language Models (LLMs)
 
@@ -136,7 +139,7 @@ This section focuses on understanding how language models process prompts and ge
 
 - Python 3.10 or later
 - Git
-- A code editor such as Visual Studio Code
+- Visual Studio Code or another code editor
 
 For local model execution, install [Ollama](https://ollama.com/).
 
@@ -144,9 +147,6 @@ For local model execution, install [Ollama](https://ollama.com/).
 
 ```bash
 git clone https://github.com/keshkong/Langchain_Models.git
-```
-
-```bash
 cd Langchain_Models
 ```
 
@@ -163,8 +163,6 @@ Activate it on Windows:
 ```
 
 ### Install dependencies
-
-Install the packages required by the scripts you want to run:
 
 ```bash
 pip install langchain langchain-openai langchain-anthropic langchain-google-genai langchain-huggingface langchain-ollama sentence-transformers scikit-learn numpy streamlit python-dotenv
@@ -198,7 +196,7 @@ Through this repository, the key learning objectives include:
 - Understanding text embeddings and vector representations.
 - Implementing document similarity using cosine similarity.
 - Exploring semantic search and query embeddings.
-- Building foundations for retrieval-augmented generation (RAG) applications.
+- Building foundations for Retrieval-Augmented Generation (RAG) applications.
 
 ## 8. Future Improvements
 
